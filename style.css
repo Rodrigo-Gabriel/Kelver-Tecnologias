@@ -1,3 +1,73 @@
+/* ==========================================================
+   PALETA DE CORES - KLEVER TECNOLOGIA
+   ========================================================== */
+
+:root{
+
+    /* ===== Marca ===== */
+    --primary: #7B55E2;
+    --primary-light: #A78BFA;
+    --primary-dark: #5B21B6;
+
+    --secondary: #2563EB;
+    --secondary-light: #60A5FA;
+
+    /* ===== Fundo ===== */
+    --background: #081B33;
+    --background-secondary: #112240;
+    --background-card: #0B1E36;
+    --background-hover: #122B4C;
+
+    /* ===== Texto ===== */
+    --text: #FFFFFF;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    /* ===== Bordas ===== */
+    --border: rgba(255,255,255,.08);
+    --border-light: rgba(255,255,255,.12);
+
+    /* ===== Glass ===== */
+    --glass: rgba(255,255,255,.05);
+
+    /* ===== Status ===== */
+    --success: #22C55E;
+    --warning: #FEBC2E;
+    --danger: #FF5F57;
+
+    /* ===== Gradientes ===== */
+    --gradient-primary: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    --gradient-secondary: linear-gradient(
+        90deg,
+        #ff5f57,
+        #d082f5,
+        #8560e9,
+        var(--primary)
+    );
+
+    /* ===== Sombras ===== */
+    --shadow: rgba(0,0,0,.20);
+    --shadow-primary: rgba(123,85,226,.35);
+
+    /* ===== Bordas arredondadas ===== */
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:24px;
+    --radius-xl:32px;
+
+    /* ===== Espaçamentos ===== */
+    --section-padding:120px;
+    --container:1250px;
+
+    /* ===== Transições ===== */
+    --transition:.3s ease;
+}
+
 *{
 margin:0;
 padding:0;
@@ -7,7 +77,7 @@ font-family:'Inter',sans-serif;
 
 body{
 
-background:#081B33;
+background:var(--primary-dark);
 color:white;
 overflow-x:hidden;
 
@@ -58,7 +128,7 @@ font-weight:800;
 
 .logo span{
 
-color:#3B82F6;
+color:var(--primary-light);
 
 }
 
@@ -86,8 +156,8 @@ transition:.3s;
 
 nav a:hover{
 
-color:#60A5FA;
-
+color:var(--text-muted);
+/*text-shadow: var(--primary-light) 0px 0px 10px;*/
 }
 
 .btn-nav{
@@ -96,8 +166,13 @@ padding:15px 25px;
 
 border-radius:12px;
 
-background:#2563EB;
+background:var(--primary);
 
+}
+
+.btn-nav:hover{
+    background-color: var(--primary-dark);
+    box-shadow: var(--primary-dark) 0px 0px 10px;
 }
 
 .hero{
@@ -150,7 +225,7 @@ margin-bottom:30px;
 
 h1 span{
 
-color:#3B82F6;
+color: #081B33;
 
 }
 
@@ -176,7 +251,7 @@ margin:45px 0;
 
 .btn-primary{
 
-background:#2563EB;
+background:var(--primary);
 
 padding:18px 30px;
 
@@ -218,7 +293,7 @@ margin-top:30px;
 
 font-size:42px;
 
-color:#60A5FA;
+color:var(--primary-light);
 
 }
 
@@ -270,7 +345,7 @@ color:#60A5FA;
 
 .dash-card h2{
     margin:10px 0;
-    color:#3B82F6;
+    color:#7B55E2;
     font-size:32px;
 }
 
@@ -302,7 +377,7 @@ color:#60A5FA;
     width:100%;
     height:100%;
     border-radius:50px;
-    background:linear-gradient(90deg,#ff5f57,#60A5FA,#60A5FA,#2563EB);
+    background:linear-gradient(90deg,#ff5f57,#d082f5,#8560e9,#7B55E2);
     animation:grow 2s ease;
 }
 
@@ -360,7 +435,7 @@ height:180px;
 
 border-radius:20px;
 
-background:linear-gradient(135deg,#2563EB,#60A5FA);
+background:linear-gradient(135deg,#5B21B6,#1D4ED8);
 
 }
 
@@ -400,7 +475,7 @@ z-index:-1;
 
 .blur1{
 
-background:#2563EB;
+background:var(--primary);
 
 top:-100px;
 
@@ -410,7 +485,7 @@ left:-150px;
 
 .blur2{
 
-background:#1D4ED8;
+background:var(--primary-dark);
 
 bottom:-150px;
 
@@ -540,7 +615,7 @@ opacity:1;
 
 padding:16px 28px;
 
-background:#2563EB;
+background:var(--primary);
 
 color:white;
 
@@ -556,7 +631,7 @@ transition:.3s;
 
 .visit-btn:hover{
 
-background:#3B82F6;
+background:var(--primary-dark);
 
 transform:scale(1.05);
 
@@ -694,9 +769,9 @@ cursor:pointer;
 
 transform:translateY(-12px);
 
-box-shadow:0 20px 60px rgba(37,99,235,.25);
+box-shadow:0 20px 30px var(--primary);
 
-border-color:#3B82F6;
+border-color:var(--primary);
 
 }
 
@@ -769,7 +844,7 @@ left:0;
 width:100%;
 height:4px;
 
-background:linear-gradient(90deg,#2563EB,#60A5FA);
+background:linear-gradient(90deg, var(--primary-light),var(--primary));
 
 transform:scaleX(0);
 
@@ -806,7 +881,7 @@ border-radius:18px;
 
 margin-bottom:25px;
 
-background:linear-gradient(135deg,#2563EB,#1D4ED8);
+background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));
 
 }
 
